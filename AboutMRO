@@ -1,0 +1,69 @@
+# 多继承和MRO排序问题 使用super()方法
+
+# 注意此处的super()方法写法简化了，全写应为super(本类名，self)
+class A(object):
+	def__init__(self):
+		print("enterA")
+		super().__init__()
+		print("leaveA")
+
+
+class B(object):
+	def__init__(self):
+		print("enterB")
+		super().__init__()
+		print("leaveB")
+
+
+class C(A):
+	def__init__(self):
+		print("enterC")
+		super().__init__()
+		print("leaveC")
+
+
+class D(A):
+	def__init__(self):
+		print("enterD")
+		super().__init__()
+		print("leaveD")
+
+
+class E(B,C):
+	def__init__(self):
+		print("enterE")
+		super().__init__()
+		print("leaveE")
+
+
+class F(E,D):
+	def__init__(self):
+		print("enterF")
+		super().__init__()
+		print("leaveF")
+
+f=E()
+
+输出结果为：
+enter E
+enter B
+enter C
+enter A
+leave A
+leave C
+leave B
+leave E
+
+# 一定会有人想为什么会调用父类A，看似子类B和子类C与父类A是不存在继承关系的
+# 这是因为在使用super()方法后，pyrhon会到MRO序列中找super()方法里面的类名（参数），找到后调用MRO中类名后面的类
+# 调用某方法也是按照MRO顺序来查找的
+
+# 使用__mro__方法可以查看MRO序列
+
+print(E.__mro__)
+输出结果为：
+(<class '__main__.E'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+
+# 现在就能直观的判断父类的调用顺序了
+
+
