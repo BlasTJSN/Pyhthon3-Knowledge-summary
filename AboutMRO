@@ -1,4 +1,4 @@
-# 多继承和MRO排序问题 使用super()方法
+z# 多继承和MRO排序问题 使用super()方法
 
 # 注意此处的super()方法写法简化了，全写应为super(本类名，self)
 class A(object):
@@ -66,4 +66,4 @@ print(E.__mro__)
 
 # 现在就能直观的判断父类的调用顺序了
 
-
+z
