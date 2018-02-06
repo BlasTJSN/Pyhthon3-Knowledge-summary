@@ -4,13 +4,13 @@ MVT（model-view-templates）核心思想 解耦。
 M主要负责数据处理，内嵌ORM框架，操作MySQL数据库。
 V接收HttpRequest,业务处理，返回HttpResponse。
 T负责封装构造要返回的html，内嵌了模板引擎（前端）。
-![Alt text](./1517918727601.png)
+![Alt text](./images/1517918727601.png)
 
 ####安装应用
 settings.py中
-![Alt text](./1517918739595.png)
+![Alt text](./images/1517918739595.png)
 添加要使用的应用
-![Alt text](./1517918748243.png)
+![Alt text](./images/1517918748243.png)
 
 ####建立表格
 
@@ -48,7 +48,7 @@ class MemberInfo(models.Model):
 生产迁移文件 python manage.py makemigrations
 执行迁移 python manage.py migrate
 新增文件0001_initial.py
-![Alt text](./1517918971658.png)
+![Alt text](./images/1517918971658.png)
 
 **默认采用sqlite3数据库来存储数据**
 
@@ -57,17 +57,17 @@ Django能够根据定义的模型类自动地生成管理模块
 - **管理界面本地化（汉化/修改时区）**
 
 在settings.py中
-![Alt text](./1517919019481.png)
+![Alt text](./images/1517919019481.png)
 
 修改为
-![Alt text](./1517919031424.png)
+![Alt text](./images/1517919031424.png)
 
 - **创建管理员**
 ```
 python manage.py createsuperuser
 ```
 根据提示输入信息
-![Alt text](./1517919065144.png)
+![Alt text](./images/1517919065144.png)
 
 - **注册模型类/自定义站点管理页面**
 
@@ -93,9 +93,9 @@ admin.site.register(MemberInfo, MemberAdmin)
 ```
 
 - **发布内容到数据库**
-![Alt text](./1517919169040.png)
-![Alt text](./1517919172375.png)
-![Alt text](./1517919176297.png)
+![Alt text](./images/1517919169040.png)
+![Alt text](./images/1517919172375.png)
+![Alt text](./images/1517919176297.png)
 
 
 
@@ -106,13 +106,13 @@ admin.site.register(MemberInfo, MemberAdmin)
 ####封装模板
 在项目文件下新建一个templates文件，用于存放封装构造好的模板（前端模板）
 例
-![Alt text](./1517919209135.png)
+![Alt text](./images/1517919209135.png)
 
 设置templates的路径 使其满足django封装的路径写法
-![Alt text](./1517919214092.png)
-![Alt text](./1517919221280.png)
+![Alt text](./images/1517919214092.png)
+![Alt text](./images/1517919221280.png)
 修改为
-![Alt text](./1517919228368.png)
+![Alt text](./images/1517919228368.png)
 
 ####定义视图
 视图是python函数，定义在应用的views.py中
@@ -143,9 +143,9 @@ urlpatterns = [
 ]
 ```
 2.在项目的urls.py中添加新的查找途径
-![Alt text](./1517919330737.png)
+![Alt text](./images/1517919330737.png)
 获取用户请求的路径后，先到Project.urls中进行匹配
-![Alt text](./1517919337547.png)
+![Alt text](./images/1517919337547.png)
 没匹配的"admin/"就进入1创建的urls.py里继续匹配
 通过这种方式可以调用不同的视图
 
