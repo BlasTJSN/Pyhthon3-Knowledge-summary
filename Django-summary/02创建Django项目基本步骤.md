@@ -12,7 +12,7 @@ django-admin startproject 项目名称
 django-admin startproject Project
 ```
 <br>
-![Alt text](./1517970110402.png)
+![Alt text](./images/1517970110402.png)
 
 - 子级Project是与项目同名的文件，包含如下内容
 - \__init__.py 是表示文件Project可以被作为包使用
@@ -31,7 +31,7 @@ python manage.py startapp 应用名
 python manage.py startapp APP
 ```
 <br>
-![Alt text](./1517970199252.png)
+![Alt text](./images/1517970199252.png)
 
 - admin.py 是后台的站点管理注册文件
 - \__init__.py 是表示文件Book可以被当作包使用
