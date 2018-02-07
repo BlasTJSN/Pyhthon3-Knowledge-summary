@@ -10,6 +10,8 @@ Django内置处理HTTP错误的视图，主要错误及视图包括
 	- 如果utl配置格式写错误也有可能发生500（例STATICFIELS_URLS=[ ] ,[]错写成{}）
 
 错误视图模板一般放在templates文件夹下
+<br>
+
 ![Alt text](./images/1517982850751.png)
 
 
