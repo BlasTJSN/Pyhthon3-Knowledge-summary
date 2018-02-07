@@ -1,0 +1,12 @@
+# JsonResponse对象
+
+JsonResponse继承自HttpResponse，被定义在django.http模块中
+- 接收字典作为参数
+
+使用场景：当需要响应json数据给请求者时，需要用到JsonResponse
+
+JsonResponse的content-type默认为application/json
+- 也就是说JsonResponse响应的内容格式默认是json的
+
+案例：使用ajax实现网页局部刷新时就需要使用JsonResponse响应json数据
+可查看笔记案例01
