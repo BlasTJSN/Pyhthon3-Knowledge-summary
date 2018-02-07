@@ -12,6 +12,7 @@ django-admin startproject 项目名称
 django-admin startproject Project
 ```
 <br>
+
 ![Alt text](./images/1517970110402.png)
 
 - 子级Project是与项目同名的文件，包含如下内容
@@ -31,6 +32,7 @@ python manage.py startapp 应用名
 python manage.py startapp APP
 ```
 <br>
+
 ![Alt text](./images/1517970199252.png)
 
 - admin.py 是后台的站点管理注册文件
@@ -39,3 +41,4 @@ python manage.py startapp APP
 - models.py 是处理数据的   MVT中的M
 - test.py 是做测试用的
 - views.py 是处理业务逻辑的   MVT中的V
+
