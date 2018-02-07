@@ -3,7 +3,7 @@
 HttpRequest对象是Django框架封装好的，专门接受客户端请求报文信息
 <br>
 
-![Alt text](./1517983219701.png)
+![Alt text](./images/1517983219701.png)
 
 视图的第一个参数必须是HttpRequest对象
 
