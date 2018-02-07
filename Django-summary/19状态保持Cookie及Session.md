@@ -66,7 +66,9 @@ response.delete_cookie('mark')
 Django项目默认启用Session
 
 禁用Session：将Session中间件注释即可
-![Alt text](./1517984783600.png)
+<br>
+
+![Alt text](./images/1517984783600.png)
 
 
 #### Session存储方式
@@ -86,7 +88,9 @@ SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 ```
 如果存储在数据库中，需要在项INSTALLED_APPS中安装Session应用
-![Alt text](./1517984899197.png)
+<br>
+
+![Alt text](./images/1517984899197.png)
 
 #### 默认存储Session的数据库
 迁移后会在数据库中创建出存储Session的表
