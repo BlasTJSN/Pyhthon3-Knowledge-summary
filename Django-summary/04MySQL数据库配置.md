@@ -16,12 +16,12 @@ pymysql.install_as_MySQLdb()
 默认状态 Django项目默认采用sqlite3数据库 web项目首选是mysql数据库
 <br>
 
-![Alt text](./1517971147029.png)
+![Alt text](./images/1517971147029.png)
 
 修改后
 <br>
 
-![Alt text](./1517971173502.png)
+![Alt text](./images/1517971173502.png)
 
 
 
@@ -72,7 +72,7 @@ class PeopleInfo(models.Model):
 python manage.py makemigrations
 python maahe.py migrate
 ```
-![Alt text](./1517971330729.png)
+![Alt text](./images/1517971330729.png)
 
 配置信息在migrations文件中生成
 
