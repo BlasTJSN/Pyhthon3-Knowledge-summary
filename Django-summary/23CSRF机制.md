@@ -30,7 +30,7 @@
 - 通过CSRF安全验证的方式可以有效方式此类问题的发生
 Django默认开启CSRF安全验证功能
 
-![Alt text](./1519886942597.png)
+![Alt text](./images/1519886942597.png)
 
 在模板中添加csrf_token
 ``` html
